@@ -1,6 +1,6 @@
 <?php
 
-use aditiya\easyfilemanager\Easyfilemanager;
+use aditiya\easyfilemanager\models\Easyfilemanager;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
