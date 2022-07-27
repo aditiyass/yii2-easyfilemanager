@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'name',
                 'format' => 'raw',
                 'value'=> function($model){
-                    return '<a href="'.$model->getFileUrl().'">'.$model->name.' data-pjax="0" </a>';
+                    return '<a href="'.$model->getFileUrl().'" data-pjax="0">'.$model->name.'</a>';
                 }
             ],
             'extension',
