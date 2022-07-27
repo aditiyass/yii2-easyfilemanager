@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'name',
                 'format' => 'raw',
                 'value'=> function($model){
-                    return '<a href="'.$model->fullFilePath().'">'.$model->name.'</a>';
+                    return '<a href="'.$model->getFileUrl().'">'.$model->name.'</a>';
                 }
             ],
             'extension',

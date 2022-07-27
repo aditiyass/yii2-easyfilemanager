@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        Link : <a href="<?= $model->fullFilePath() ?>"><?= $model->name ?></a>
+        Link : <a href="<?= $model->getFileUrl() ?>"><?= $model->name ?></a>
     </p>
 
     <p>
