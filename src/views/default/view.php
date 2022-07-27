@@ -16,6 +16,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+        Link : <a href="<?= $model->fullFilePath() ?>"><?= $model->name ?></a>
+    </p>
+
+    <p>
         <?= Html::a(Yii::t('easy_file_manager', 'Update'), ['update', 'key' => $model->key], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('easy_file_manager', 'Delete'), ['delete', 'key' => $model->key], [
             'class' => 'btn btn-danger',

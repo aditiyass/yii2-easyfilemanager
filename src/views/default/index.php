@@ -31,7 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'key',
-            'name',
+            [
+                'label'=>'Name / Url',
+                'attribute' => 'name',
+                'format' => 'raw',
+                'value'=> function($model){
+                    return '<a href="'.$model->fullFilePath().'">'.$model->name.'</a>';
+                }
+            ],
             'extension',
             'category',
             'description:ntext',
