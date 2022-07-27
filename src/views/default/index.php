@@ -1,13 +1,13 @@
 <?php
 
-use app\modules\easy_file_manager\models\Easyfilemanager;
+use aditiya\easyfilemanager\Easyfilemanager;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel app\modules\easy_file_manager\models\EasyfilemanagerSearch */
+/* @var $searchModel aditiya\easyfilemanager\models\EasyfilemanagerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('easy_file_manager', 'Easyfilemanagers');

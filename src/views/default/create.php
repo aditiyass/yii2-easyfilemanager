@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\easy_file_manager\models\Easyfilemanager */
+/* @var $model aditiya\easyfilemanager\models\Easyfilemanager */
 
 $this->title = Yii::t('easy_file_manager', 'Create Easyfilemanager');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('easy_file_manager', 'Easyfilemanagers'), 'url' => ['index']];

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\easy_file_manager\models\Easyfilemanager */
+/* @var $model aditiya\easyfilemanager\models\Easyfilemanager */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('easy_file_manager', 'Easyfilemanagers'), 'url' => ['index']];
