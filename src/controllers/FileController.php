@@ -41,7 +41,6 @@ class FileController extends Controller
         $response = Yii::$app->response;
         $efm = Easyfilemanager::findOne(['key'=>$key]);
         if($efm != null){
-            var_dump($efm->rolelists);exit;
             $is_allowed = $efm->checkCredential();
             $filepath = $efm->fullFilePath();
             if(is_file($filepath) && $is_allowed){
