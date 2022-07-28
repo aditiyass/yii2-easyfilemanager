@@ -15,7 +15,7 @@ interface EasyfilemanagerInterface
     /**
      * @return string Url of file.
      */
-    public function fileUrl();
+    public function getFileUrl();
 
     /**
      * @return string|boolean key, or whether file is successfully uploaded or not
