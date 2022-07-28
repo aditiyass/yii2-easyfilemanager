@@ -25,17 +25,21 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply add to module configuration :
+Once the extension is installed, add to module configuration :
 
 ```php
     'modules' => [
         ...
         'efm' => [
             'class' => 'aditiya\easyfilemanager\Module', // Module class
-            'usedemo' => true, // if you want to use demo in this default controller
-            // 'uploadfilepath' => '@app/uploads/files',
-            // 'defaultUrl' => '/sfm/file/get',
+            'usedemo' => true, // if you want to use demo
         ],
         ...
     ]
 ```
+
+module parameters are :
+<br>```usedemo``` : to use demo in /efm
+<br>```uploadfilepath``` : path to upload file folder
+<br>```defaultUrl``` : where to get file. you can create costum url by simply extend controller from ```aditiya\easyfilemanager\controllers\FileController```
+<br>```dbConnection``` : custom database connection

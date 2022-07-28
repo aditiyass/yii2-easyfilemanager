@@ -210,16 +210,6 @@ class Easyfilemanager extends \yii\db\ActiveRecord
     }
 
     /**
-     * Folder path where meta data is stored.
-     *
-     * @return string|boolean
-     */
-    public function fullMetaDataPath()
-    {
-        return Yii::getAlias($this->metadatapath);
-    }
-
-    /**
      * The file should be uploaded using [[\yii\widgets\ActiveField::fileInput()]].
      * 
      * @param \yii\base\Model $model — the data model
