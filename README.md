@@ -25,7 +25,9 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, add to module configuration :
+Make sure to migrate all table from `src/migrations` folder.
+
+Once the extension is installed and database is ready, add to module configuration :
 
 ```php
     'modules' => [
