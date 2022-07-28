@@ -183,6 +183,30 @@ class Easyfilemanager extends \yii\db\ActiveRecord
     }
 
     /**
+     * shortcut to get object by key.
+     *
+     * @param string $key file key to get
+     * 
+     * @return Easyfilemanager|null
+     */
+    public function getByKey($key)
+    {
+        return Easyfilemanager::findOne(['key'=>$key]);
+    }
+
+    /**
+     * get objects by category.
+     *
+     * @param string $category file category
+     * 
+     * @return Easyfilemanager|null
+     */
+    public function getByCategory($category)
+    {
+        return Easyfilemanager::find()->where(['category'=>$category])->all();
+    }
+
+    /**
      * Get path where file is or will be saved.
      *
      * @return string|boolean
