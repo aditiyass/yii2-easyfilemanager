@@ -159,9 +159,27 @@ class Easyfilemanager extends \yii\db\ActiveRecord
                 $access = true;
             }
             else{
-                foreach ($this->rolelists as $role) {
-                    if(Yii::$app->user->can($role)){
-                        $access = true;
+                foreach ($this->rolelists as $rolekey => $role) {
+                    if(is_string($rolekey)){
+                        if(Yii::$app->user->can($rolekey)){
+                            if(is_array($role)){
+                                foreach ($role as $id_data) {
+                                    if(Yii::$app->user->identity->getId() == $id_data){
+                                        $access = true;
+                                    }
+                                }
+                            }
+                            else{
+                                if(Yii::$app->user->identity->getId() == $role){
+                                    $access = true;
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        if(Yii::$app->user->can($role)){
+                            $access = true;
+                        }
                     }
                 }   
             }

@@ -62,9 +62,9 @@ use aditiya\easyfilemanager\models\Easyfilemanager;
 $model = new Easyfilemanager();
 
 if ($this->request->isPost) {
-    $key->rolelists = ['admin','writer'];
-    $key->category = 'draftpage';
-    $key->description = 'draft page image';
+    $model->rolelists = ['admin','writer'];
+    $model->category = 'draftpage';
+    $model->description = 'draft page image';
     $key = $model->uploadByInstance($model,'file');
     if($key){
         return $this->redirect(['view', 'key' => $key]);
@@ -102,4 +102,10 @@ class ModelExample extends Model implements EasyfilemanagerInterface {
     }
     ...
 }
+```
+
+***update 1.1.0*** : now you can add in rolelist, if you only want specific user with specific role to access your data.
+```php
+$model = new Easyfilemanager();
+$model->rolelists = ['admin','writer'=>1,'editor'=>[2,3,4]];
 ```
